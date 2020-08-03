@@ -22,13 +22,23 @@ class traveler {
             this.food -= 1
 
         }
-        console.log(this.eat)
     }
+
 }
 
-main.append('traveler');
-let buttonElement = document.createElement('button')
+main.append();
+
+
+let button1Element = document.createElement('button')
+let button2Element = document.createElement('button')
 let inputElement = document.createElement('input')
+
+main.appendChild(button1Element)
+main.appendChild(button2Element)
+main.appendChild(inputElement)
+
+button1Element.append('feed')
+button2Element.append('add')
 
 class Wagon {
     constructor(capacity) {
@@ -59,17 +69,16 @@ class Wagon {
         return false
     }
     totalFood() {
-        for (let index = 0; index + this.food; index++) {
-            var food = this.food + hunt[index]
+        var foodpassengers = 0
 
-            return this.totalFood
+        for (let index = 0; index < this.passengers.length; index++) {
+            var passenger = this.passengers[index]
+            foodpassengers += passenger.food
+
         }
-
+        return foodpassengers
     }
 
 }
 
-
-
-main.append('Wagon');
 
